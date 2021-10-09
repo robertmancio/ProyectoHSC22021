@@ -10,6 +10,12 @@
 *.userosscache
 *.sln.docstates
 
+# archivos a ignorar
+*.rpt
+*.chm
+*.html
+# Fin archivos
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
