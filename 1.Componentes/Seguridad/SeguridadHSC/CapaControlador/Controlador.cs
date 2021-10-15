@@ -54,14 +54,14 @@ namespace CapaControladorSeguridadHSC
 
 
         //frmMantenimientoAplicacion
-        public void insertarAplicacion(string Id, string Nombre, int Estado, string Ruta)
+        public void insertarAplicacion(string Id, string modulo, string nombre, int Estado, string RutaChm, string rutahtml)
         {
-            sn.funInsertar(Id, Nombre, Estado, Ruta);
+            sn.funInsertar(Id, modulo, nombre, Estado, RutaChm, rutahtml);
         }
 
-        public void modificarAplicacion(string Id, string Nombre, int Estado, string Ruta)
+        public void modificarAplicacion(string Id, string modulo, string nombre, int Estado, string RutaChm, string rutahtml)
         {
-            sn.funModificar(Id, Nombre, Estado, Ruta);
+            sn.funModificar(Id, modulo, nombre, Estado, RutaChm, rutahtml);
         }
 
         public (string, int, string) buscarAplicacion(string id, string nombre, int estado, string ruta)
@@ -87,6 +87,12 @@ namespace CapaControladorSeguridadHSC
         {
             string sql = "SELECT nombre FROM componenteseguridad.modulo;";
             return sn.llenarcbxUsuario(sql);
+        }
+
+        public string consultaModulo(string nombre)
+        {
+            string id = sn.consultaModulo(nombre);
+            return id;
         }
 
 
@@ -394,5 +400,35 @@ namespace CapaControladorSeguridadHSC
             return nombre;
         }
 
+        //Mantenimiento Perfil
+
+        public void metodoInsertar(string Id, string Nombre, string Descripcion, int Estado)
+        {
+            sn.metodoInsertar(Id, Nombre, Descripcion, Estado);
+        }
+
+        public void modificarModificar(string Id, string Nombre, string Descripcion, int Estado)
+        {
+            sn.metodoModificar(Id, Nombre, Descripcion, Estado);
+        }
+
+        public (string, string, int) metodoBuscar(string id, string nombre, string descripcion, int estado, string ruta)
+        {
+            sn.metodoBuscar(id, nombre, descripcion, estado);
+            return (nombre, descripcion, estado);
+        }
+
+        public void metodoEliminar(string id)
+        {
+            sn.metodoEliminar(id);
+        }
+
+        public DataTable metodollenarTbl(string tabla)
+        {
+            OdbcDataAdapter dt = sn.metodollenarTbl(tabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
     }
 }
