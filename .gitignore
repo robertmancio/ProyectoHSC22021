@@ -11,9 +11,9 @@
 *.sln.docstates
 
 # archivos a ignorar
-*.rpt
-*.chm
-*.html
+## *.rpt
+## *.chm
+## *.html
 # Fin archivos
 
 # User-specific files (MonoDevelop/Xamarin Studio)
