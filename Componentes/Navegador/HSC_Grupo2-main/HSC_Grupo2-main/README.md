@@ -1,1 +1,0 @@
-# HSC_Grupo2

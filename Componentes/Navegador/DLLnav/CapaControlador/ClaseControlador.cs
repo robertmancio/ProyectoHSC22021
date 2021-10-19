@@ -132,10 +132,9 @@ namespace CapaControlador
 
         public DataTable llenarTbl(string tablaDB)//Jaime López 0901-18-735
         {
-            OdbcDataAdapter dt = modelo.llenarTbl(tablaDB);
-            DataTable table = new DataTable();
-            dt.Fill(table);
-            return table;
+            //cambiado 18/10/2021-01:30pm, todo el odbc se paso a realizar solo en la modelo
+            //para aumentar la seguridad
+            return modelo.llenarTbl(tablaDB);
         }
         public bool modificar(TextBox[] campos, string tablas)//Modificar de Wilber Enrique Segura Ramirez 0901-18-13952
         {
