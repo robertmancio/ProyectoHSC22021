@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -420,7 +419,7 @@ namespace CapaModelo
 
 
         //Jaime López 0901-18-735 y Modificada por Wilmer Torres 9959-18-9131
-        public OdbcDataAdapter llenarTbl(string tabla)// metodo  que obtinene el contenio de una tabla
+        public DataTable llenarTbl(string tabla)// metodo  que obtinene el contenio de una tabla
         {
             Conexion cn = new Conexion();
 
@@ -430,8 +429,11 @@ namespace CapaModelo
             OdbcConnection conn = cn.conexion();
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, conn);
             cn.desconexion(conn);
-
-            return dataTable;
+            //se trajo el código del procesamiento de la data ODBC a esta parte
+            //para aumentar la seguridad, antes estaba en la capa Controlador
+            DataTable table = new DataTable();
+            dataTable.Fill(table);
+            return table;
         }
         //Wilber Segura 0901-18-13952
         public ArrayList consIndividual(string id, string tablas, int cuenta, string referencia)
