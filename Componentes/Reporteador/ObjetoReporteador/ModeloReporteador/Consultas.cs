@@ -90,8 +90,8 @@ namespace ModeloReporteador
                 return null;
             }
         }
-
-        public OdbcDataAdapter llenarTbl(string tabla)// metodo  que obtinene el contenio de una tabla
+        //Francisco 0901-17-16694 
+        public OdbcDataAdapter llenarTbl(string tabla)// metodo  que obtinene el contenio de una tabla en la BD
         {
             //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
             string sql = "SELECT * FROM " + tabla + " ;";

@@ -29,8 +29,8 @@ namespace VistaReporteador
         ControladorQ sn = new ControladorQ();
 
         String tabla = "reportes";
-
-        public void actualizardatagriew()
+        //Francisco 0901-17-16694
+        public void actualizardatagriew()//Funcion de actualizar 
         {
             DataTable dt = sn.llenarTbl(tabla);
             dataGridView1.DataSource = dt;
@@ -135,14 +135,14 @@ namespace VistaReporteador
                 textBoxRuta.Text = openFileDialog.FileName;
             }            
         }
-
-        private void button5_Click(object sender, EventArgs e)
+        //Francisco 0901-17-16694
+        private void button5_Click(object sender, EventArgs e)//Llama y actualiza datagrid
         {
             actualizardatagriew();
         }
-        
-        
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        //Francisco 0901-17-16694
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)// Muestra los datos en los texbox al seleccionarlos en el data grid por medio del evento mouse
         {
             textBoxID.Text= dataGridView1.CurrentRow.Cells[0].Value.ToString();            
             textBoxNombre.Text= dataGridView1.CurrentRow.Cells[1].Value.ToString();

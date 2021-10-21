@@ -68,8 +68,8 @@ namespace ControladorReporteador
         }
 
         Consultas cons = new Consultas();
-
-        public DataTable llenarTbl(string tabla)
+        //Francisco 0901-17-16694 
+        public DataTable llenarTbl(string tabla)//Llena el datagrid con los datos obtenidos en la funcion de consultas 
         {
             OdbcDataAdapter dt = cons.llenarTbl(tabla);
             DataTable table = new DataTable();
