@@ -12,7 +12,7 @@ namespace ModeloReporteador
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=Proyecto");
+            OdbcConnection conn = new OdbcConnection("Dsn=conexionHSC");
             try
             {
                 conn.Open();

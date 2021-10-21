@@ -35,6 +35,7 @@ namespace VistaReporteador
             DataTable dt = sn.llenarTbl(tabla);
             dataGridView1.DataSource = dt;
         }
+
         
         public void llenarcbxIdAplic()
         {
@@ -102,6 +103,7 @@ namespace VistaReporteador
             c.data(Convert.ToString(dataGridView1.DataSource));           
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
             ControladorQ cq = new ControladorQ();
@@ -113,8 +115,10 @@ namespace VistaReporteador
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmEliminar eli = new frmEliminar();
-            eli.Show();
+            ControladorQ cq = new ControladorQ();
+            cq.Actualizar(textBoxNombre.Text, textBoxRuta.Text, cbxIdAplic.Text, txtEstado.Text, textBoxID.Text);
+            cleanTextBox();
+            desactivarTextBox();
             dataGrid();
         }
 
@@ -123,6 +127,7 @@ namespace VistaReporteador
             activarTextBox();
         }
 
+        // Luis Reyes 0901-15-3121
         private void button4_Click(object sender, EventArgs e)
         {          
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -136,7 +141,7 @@ namespace VistaReporteador
             actualizardatagriew();
         }
         
-
+        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxID.Text= dataGridView1.CurrentRow.Cells[0].Value.ToString();            
@@ -169,17 +174,21 @@ namespace VistaReporteador
         
         public void abrir_Click(object sender, EventArgs e)
         {
-            string r = textBoxRuta.Text;
-            frmReporteAdm b = new frmReporteAdm(r);
-            b.Show();
+            int est;
+            est = int.Parse(txtEstado.Text);
+            if (est == 1)
+            {
+                string r = textBoxRuta.Text;
+                frmReporteAdm b = new frmReporteAdm(r);
+                b.Show();
+            }
+            else
+            {
+                MessageBox.Show("Reporte Desabilitado");
+            }
         }
 
-        public void a()
-        {
-            string r = textBoxRuta.Text;
-            MessageBox.Show(r);
-        }
-
+      
         public void textBoxRuta_TextChanged(object sender, EventArgs e)
         {
             
@@ -245,6 +254,7 @@ namespace VistaReporteador
             llenarcbxIdAplic();
         }
 
+        // Angel Chacón 9959-18-5201
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ControladorQ cq = new ControladorQ();
