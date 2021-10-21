@@ -4,6 +4,8 @@ using System;
 using System.Windows.Forms;
 using static datosUsuario;
 
+//0901-18-4982  Roberto Lopez
+
 namespace CapaVistaSeguridadHSC
 {
     public partial class frmCambioContraseña : Form

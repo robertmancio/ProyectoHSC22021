@@ -7,6 +7,7 @@ using static datosUsuario;
 
 namespace CapaVistaSeguridadHSC
 {
+    //0901-18-17144 Luis De la Cruz
     public partial class frmMantenimientoPerfil : Form
     {
         private bloqueos b = new bloqueos();
@@ -40,6 +41,8 @@ namespace CapaVistaSeguridadHSC
         }
 
         private string tabla = "perfil";
+
+        //0901-18-19528 Ivania Gatica -- 0901-18-17144 Luis De la Cruz 
 
         public void actualizardatagriew()
         {
