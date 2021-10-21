@@ -12,6 +12,8 @@ namespace ControladorReporteador
 {
     public class ControladorQ
     {
+        //Carol Monterroso 0901-17-5961
+        //funcion para actualizar el datagrid
         Consultas con = new Consultas();
         public void Actualizar(string nombre, string ruta, string IdAplicacion, string estado, string id)
         {
@@ -81,6 +83,8 @@ namespace ControladorReporteador
             dt.Fill(table);
             return table;
         }
+        // Luis Reyes 0901-15-3121
+        // llenado del datagrid
         public DataTable llenarTb2(string datob) //Aquie creamos la funcion DataTable llenarTb2 que resive el dato que esta en el variable datob
         {
             OdbcDataAdapter db = cons.llenarTb2(datob); //creamos un objeto 
@@ -88,7 +92,7 @@ namespace ControladorReporteador
             db.Fill(table);
             return table;
         }
-
+        //Carol Monterroso 0901-17-5961
         public void data(string tabla)
         {
             string cadena = @"SELECT * FROM provisional.reportes;";            

@@ -12,6 +12,7 @@ namespace ModeloReporteador
     public class Consultas
     {
         clsConexion cn = new clsConexion();
+        //Carol Monterroso 0901-17-5961
         public void Guardar(string cadena)
         {
             try

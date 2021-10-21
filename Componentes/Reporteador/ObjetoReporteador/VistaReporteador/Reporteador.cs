@@ -70,7 +70,7 @@ namespace VistaReporteador
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
 
-
+        //Carol Monterroso 0901-17-5961
         //Funciones
         public void activarTextBox()
         {
@@ -80,7 +80,7 @@ namespace VistaReporteador
             cbxIdAplic.Enabled = true;
             cbxAplicacion.Enabled = true;
         }
-
+        //Carol Monterroso 0901-17-5961
         public void desactivarTextBox()
         {
             textBoxID.Enabled = false;
@@ -89,7 +89,7 @@ namespace VistaReporteador
             cbxIdAplic.Enabled = false;
             cbxAplicacion.Enabled = false;          
         }
-
+        //Carol Monterroso 0901-17-5961
         public void cleanTextBox()
         {
             textBoxID.Text = "";
@@ -99,7 +99,7 @@ namespace VistaReporteador
             cbxIdAplic.Text = "";
             cbxAplicacion.Text = "";
         }
-
+        //Carol Monterroso 0901-17-5961
         public void dataGrid()
         {
             ControladorQ c = new ControladorQ();
@@ -117,7 +117,7 @@ namespace VistaReporteador
             dataGrid();
         }
 
-
+        //Carol Monterroso 0901-17-5961
         private void button2_Click(object sender, EventArgs e)
         {
             ControladorQ cq = new ControladorQ();
@@ -126,7 +126,7 @@ namespace VistaReporteador
             desactivarTextBox();
             dataGrid();
         }
-
+        //Carol Monterroso 0901-17-5961
         private void button3_Click(object sender, EventArgs e)
         {
             activarTextBox();

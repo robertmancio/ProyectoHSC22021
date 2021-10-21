@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ModeloReporteador
 {
+    // Luis Reyes 0901-15-3121
     public class clsConexion
     {
         public OdbcConnection conexion()
