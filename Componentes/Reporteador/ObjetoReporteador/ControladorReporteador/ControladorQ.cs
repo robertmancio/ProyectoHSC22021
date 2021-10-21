@@ -27,7 +27,9 @@ namespace ControladorReporteador
                 "WHERE (IdReporte = '" + id +"');";
                 con.Guardar(cadena);
         }
-        
+
+        //Angel Chacón 9959-18-5201 
+        //funcion para guardar nuevo reporte
         public void GuardarD(string id, string nombre, string ruta, string IdAplicacion, string estado)
         {
             string exc = @"\\";
@@ -38,13 +40,15 @@ namespace ControladorReporteador
                 con.Guardar(cadena);
         }
 
-        //Funcion para obtener el IdModulo
+        //Angel Chacón 9959-18-5201 
+        //Funcion para obtener el IdModulo para el combobox
         public OdbcDataReader IdModulo(string nombreM)
         {        
             string cadena = "Select IdModulo from modulos where Nombre = '" + nombreM + "';";
             return con.IdMod(cadena);          
         }
 
+        //Angel Chacón 9959-18-5201 
         //Funcion para obtener el nombre del modulo en combobox
         public OdbcDataReader llenarcbxModulo()
         {
@@ -52,7 +56,7 @@ namespace ControladorReporteador
             return con.llenarcbxmodulo(sql);
         }
 
-
+        //Angel Chacón 9959-18-5201 
         //Funcion para obtener el IdAplic
         public OdbcDataReader IdAplici(string nombreA)
         {
@@ -60,6 +64,7 @@ namespace ControladorReporteador
             return con.IdAplic(cadena);
         }
 
+        //Angel Chacón 9959-18-5201 
         //Funcion para obtener el nombre de la aplicacion en combobox
         public OdbcDataReader llenarcbxAplic()
         {

@@ -323,6 +323,7 @@ namespace VistaReporteador
             this.cbxIdAplic.Name = "cbxIdAplic";
             this.cbxIdAplic.Size = new System.Drawing.Size(90, 21);
             this.cbxIdAplic.TabIndex = 46;
+            this.cbxIdAplic.SelectedIndexChanged += new System.EventHandler(this.cbxIdAplic_SelectedIndexChanged);
             // 
             // btnGuardar
             // 

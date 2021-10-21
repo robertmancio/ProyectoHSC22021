@@ -103,7 +103,8 @@ namespace VistaReporteador
             c.data(Convert.ToString(dataGridView1.DataSource));           
         }
 
-        
+        //Angel Chacón 9959-18-5201 
+        //llamada a la funcion para modificar datos en la tabla de roportes
         private void button1_Click(object sender, EventArgs e)
         {
             ControladorQ cq = new ControladorQ();
@@ -112,6 +113,7 @@ namespace VistaReporteador
             desactivarTextBox();
             dataGrid();
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -151,6 +153,8 @@ namespace VistaReporteador
             txtEstado.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();            
         }
 
+        //Angel Chacón 9959-18-5201 
+        //obtenicion de valor para el estado al seleccionar el radio button de activo
         private void rbVisible_CheckedChanged(object sender, EventArgs e)
         {
             String est;
@@ -161,6 +165,8 @@ namespace VistaReporteador
             }            
         }
 
+        //Angel Chacón 9959-18-5201 
+        //obtenicion de valor para el estado al seleccionar el radio button de inactivo
         private void rbNovisible_CheckedChanged(object sender, EventArgs e)
         {
             String est;
@@ -171,7 +177,8 @@ namespace VistaReporteador
             }
         }
 
-        
+        //Angel Chacón 9959-18-5201 
+        //Funcion para visalizar los reportes asociados a los modulos de trabajo
         public void abrir_Click(object sender, EventArgs e)
         {
             int est;
@@ -249,12 +256,15 @@ namespace VistaReporteador
 
         }
 
+        //Angel Chacón 9959-18-5201 
+        //obtencion de datos de la funcion de controlador
         private void cbxAplicacion_SelectedIndexChanged(object sender, EventArgs e)
         {
             llenarcbxIdAplic();
         }
 
         // Angel Chacón 9959-18-5201
+        //llamada a la funcion de controlador para guardar reporte
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ControladorQ cq = new ControladorQ();
@@ -262,6 +272,11 @@ namespace VistaReporteador
             cleanTextBox();
             desactivarTextBox();
             dataGrid();
+        }
+
+        private void cbxIdAplic_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
