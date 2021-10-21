@@ -398,3 +398,20 @@ ALTER TABLE `marca`
 --
 ALTER TABLE `registro_compra`
   ADD CONSTRAINT `registro_compra_ibfk_1` FOREIGN KEY (`id_factura_header`) REFERENCES `factura_header` (`id_factura_header`);
+  
+-- Modificaciones Area de compras
+-- Creacion de tablas y su llave foranea
+create table bodegas(
+pkidbodegad int not null auto_increment primary key,
+nombre varchar (100),
+descripcion varchar(100));
+
+create table inventario(
+pkidinventario int not null auto_increment primary key,
+fkidbodegad int,
+fkidproducto varchar(20) not null,
+cantidad int,
+descripcion varchar(100)
+);
+
+alter table inventario add foreign key fk_idbodegad (fkidbodegad) references bodegas (pkidbodegad);
