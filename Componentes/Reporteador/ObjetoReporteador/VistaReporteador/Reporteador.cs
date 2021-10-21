@@ -36,7 +36,8 @@ namespace VistaReporteador
             dataGridView1.DataSource = dt;
         }
 
-        
+        //Angel Chacón 9959-18-5201 
+        //funcion para mostrar id en el combobox de las apliaciones existentes
         public void llenarcbxIdAplic()
         {
             try
@@ -51,7 +52,9 @@ namespace VistaReporteador
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex); }
         }
-
+    
+        //Angel Chacón 9959-18-5201 
+        //funcion para mostrar los nombres en el combobox de las apliaciones existentes
         public void llenarcbxAplicacion()
         {
             try
