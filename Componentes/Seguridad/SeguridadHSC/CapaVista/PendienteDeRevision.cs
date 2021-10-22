@@ -9,11 +9,11 @@ using static datosUsuario;
 //0901-18-4982  Roberto Lopez
 namespace CapaVistaSeguridadHSC
 {
-    public partial class frmAplicacionAPerfiles : Form
+    public partial class PendienteDeRevision : Form
     {
         private Controlador cn = new Controlador();
 
-        public frmAplicacionAPerfiles()
+        public PendienteDeRevision()
         {
             InitializeComponent();
             CenterToScreen();
