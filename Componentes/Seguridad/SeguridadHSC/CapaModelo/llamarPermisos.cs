@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
+//0901-18-17144 Luis De la Cruz
 
 namespace CapaModeloSeguridadHSC
 {

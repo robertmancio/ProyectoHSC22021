@@ -6,6 +6,7 @@ using BitacoraUsuario;
 using CapaControladorSeguridadHSC;
 using static datosUsuario;
 
+//0901-18-4982  Roberto Lopez
 namespace CapaVistaSeguridadHSC
 {
     public partial class frmAplicacionAPerfiles : Form
