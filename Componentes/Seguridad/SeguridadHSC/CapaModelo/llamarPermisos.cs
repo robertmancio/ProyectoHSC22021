@@ -37,7 +37,7 @@ namespace CapaModeloSeguridadHSC
 
 
 
-
+        //Luis de la Cruz 0901-18-17144
         public string llenarpermisos(string id, string p, string permiso, string tabla, string pk, string app)
         {
 
