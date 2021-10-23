@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaVista;
 using CapaVistaSeguridadHSC;
 
 namespace CapaVistaMVentasCC
@@ -88,6 +89,13 @@ namespace CapaVistaMVentasCC
             }
             else
             { this.Close(); }
+        }
+
+        private void generarPolizaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEnlaceContableVentas form3 = new frmEnlaceContableVentas();
+            form3.MdiParent = this;
+            form3.Show();
         }
     }
 }
